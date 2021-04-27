@@ -36,7 +36,7 @@ export class ChipsInputComponent implements OnInit, OnDestroy {
     const url = this.url(text)
     return this.http
       .get<any>(url)
-      .pipe(map((item) => item.map((i) => i.values.eng)))
+      .pipe(map((item) => item.map((i) => i.values.fre)))
   }
 
   constructor(private http: HttpClient) {

@@ -28,6 +28,7 @@ class Settings {
       value: 'EPSG:3857',
     },
   ]
+  thesaurusUrl = 'https://www.pigma.org/geonetwork/srv/api/registries/vocabularies/search?type=CONTAINS&thesaurus=external.theme.inspire-theme&rows=200&q=${q}&uri=**&lang=eng'
 
   init() {
     return fetch(SETTING_API)

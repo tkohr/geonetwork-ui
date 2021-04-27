@@ -1,8 +1,10 @@
 import { WizardFieldType } from '@lib/editor'
 import { WizardFieldModel } from '@lib/editor'
 
-export const DEFAULT_CHIPS_ITEMS_URL = (keys) =>
-  `https://www.pigma.org/geonetwork/srv/api/registries/vocabularies/search?type=CONTAINS&thesaurus=external.theme.inspire-theme&rows=200&q=${keys}&uri=**&lang=eng`
+import SETTINGS from '../../settings'
+
+
+export const DEFAULT_CHIPS_ITEMS_URL = (q:string): string => SETTINGS.thesaurusUrl.replace('${q}', q)
 
 export const STORAGE_KEY = 'datafeeder-state'
 
